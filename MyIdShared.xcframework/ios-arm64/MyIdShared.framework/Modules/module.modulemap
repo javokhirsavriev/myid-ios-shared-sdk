@@ -1,0 +1,11 @@
+framework module MyIdShared {
+  umbrella header "MyIdShared.h"
+
+  export *
+  module * { export * }
+}
+
+module MyIdShared.Swift {
+  header "MyIdShared-Swift.h"
+  requires objc
+}

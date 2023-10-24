@@ -1,0 +1,127 @@
+// swift-interface-format-version: 1.0
+// swift-compiler-version: Apple Swift version 5.8.1 (swiftlang-5.8.0.124.5 clang-1403.0.22.11.100)
+// swift-module-flags: -target arm64-apple-ios13.0-simulator -enable-objc-interop -enable-library-evolution -swift-version 5 -enforce-exclusivity=checked -O -module-name MyIdShared
+// swift-module-flags-ignorable: -enable-bare-slash-regex
+import AVFoundation
+import CoreImage.CIFilterBuiltins
+import Combine
+import CommonCrypto
+import Compression
+import CoreImage
+import CoreVideo
+import Foundation
+import LocalAuthentication
+@_exported import MyIdShared
+import Security
+import Swift
+import UIKit
+import Vision
+import _Concurrency
+import _StringProcessing
+@_inheritsConvenienceInitializers @objc public class MyIdClient : ObjectiveC.NSObject {
+  @objc public class func start(withConfig config: MyIdShared.MyIdConfig, withDelegate delegate: any MyIdShared.MyIdClientDelegate)
+  @objc public class func run(withConfig config: MyIdShared.MyIdConfig, withDelegate delegate: any MyIdShared.MyIdClientDelegate) -> UIKit.UIViewController
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public protocol MyIdClientDelegate {
+  @objc func onSuccess(result: MyIdShared.MyIdResult)
+  @objc func onError(exception: MyIdShared.MyIdException)
+  @objc func onUserExited()
+}
+@_inheritsConvenienceInitializers @objc public class MyIdConfig : ObjectiveC.NSObject {
+  @objc public var locale: MyIdShared.MyIdLocale
+  @objc public var cameraShape: MyIdShared.MyIdCameraShape
+  @objc public var resolution: MyIdShared.MyIdResolution
+  @objc public var cameraSelector: MyIdShared.MyIdCameraSelector
+  @objc public var presentationStyle: MyIdShared.MyIdPresentationStyle
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MyIdLocale : Swift.Int {
+  case RU = 0
+  case EN
+  case UZ
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum MyIdCameraSelector : Swift.Int {
+  case FRONT = 0
+  case BACK
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@objc public enum MyIdCameraShape : Swift.Int {
+  case ELLIPSE = 0
+  case CIRCLE
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class MyIdResult : ObjectiveC.NSObject {
+  @objc public var base64: Swift.String?
+  @objc public var width: Swift.String?
+  @objc public var height: Swift.String?
+  @objc public var pixels: [Swift.UInt8]?
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MyIdPresentationStyle : Swift.Int {
+  case FULL = 0
+  case SHEET
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class MyIdGenerator : ObjectiveC.NSObject {
+  @objc public class func hash(payload: Swift.String, clientHash: Swift.String, clientHashId: Swift.String) -> Swift.String?
+  @objc public class func device() -> Swift.String
+  @objc public class func deviceModel() -> Swift.String?
+  @objc public class func deviceName() -> Swift.String?
+  @objc public class func systemName() -> Swift.String?
+  @objc public class func systemVersion() -> Swift.String?
+  @objc public class func isPhone() -> Swift.Bool
+  @objc public class func isPad() -> Swift.Bool
+  @objc public class func isSimulator() -> Swift.Bool
+  @objc override dynamic public init()
+  @objc deinit
+}
+@objc public enum MyIdResolution : Swift.Int {
+  case RESOLUTION_480 = 0
+  case RESOLUTION_720
+  public init?(rawValue: Swift.Int)
+  public typealias RawValue = Swift.Int
+  public var rawValue: Swift.Int {
+    get
+  }
+}
+@_inheritsConvenienceInitializers @objc public class MyIdException : ObjectiveC.NSObject {
+  @objc public var message: Swift.String?
+  @objc override dynamic public init()
+  @objc deinit
+}
+extension MyIdShared.MyIdLocale : Swift.Equatable {}
+extension MyIdShared.MyIdLocale : Swift.Hashable {}
+extension MyIdShared.MyIdLocale : Swift.RawRepresentable {}
+extension MyIdShared.MyIdCameraSelector : Swift.Equatable {}
+extension MyIdShared.MyIdCameraSelector : Swift.Hashable {}
+extension MyIdShared.MyIdCameraSelector : Swift.RawRepresentable {}
+extension MyIdShared.MyIdCameraShape : Swift.Equatable {}
+extension MyIdShared.MyIdCameraShape : Swift.Hashable {}
+extension MyIdShared.MyIdCameraShape : Swift.RawRepresentable {}
+extension MyIdShared.MyIdPresentationStyle : Swift.Equatable {}
+extension MyIdShared.MyIdPresentationStyle : Swift.Hashable {}
+extension MyIdShared.MyIdPresentationStyle : Swift.RawRepresentable {}
+extension MyIdShared.MyIdResolution : Swift.Equatable {}
+extension MyIdShared.MyIdResolution : Swift.Hashable {}
+extension MyIdShared.MyIdResolution : Swift.RawRepresentable {}
