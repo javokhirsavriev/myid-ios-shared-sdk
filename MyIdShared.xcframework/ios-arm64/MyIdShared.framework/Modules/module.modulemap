@@ -1,7 +1,7 @@
 framework module MyIdShared {
   umbrella header "MyIdShared.h"
-
   export *
+
   module * { export * }
 }
 
