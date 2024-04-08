@@ -299,24 +299,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-typedef SWIFT_ENUM(NSInteger, MyIdCameraSelector, open) {
-  MyIdCameraSelectorFRONT = 0,
-  MyIdCameraSelectorBACK = 1,
-};
-
-typedef SWIFT_ENUM(NSInteger, MyIdCameraShape, open) {
-  MyIdCameraShapeELLIPSE = 0,
-  MyIdCameraShapeCIRCLE = 1,
-};
-
 @class MyIdConfig;
 @protocol MyIdClientDelegate;
-@class UIViewController;
 
 SWIFT_CLASS("_TtC10MyIdShared10MyIdClient")
 @interface MyIdClient : NSObject
 + (void)startWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate;
-+ (UIViewController * _Nonnull)runWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -331,16 +319,10 @@ SWIFT_PROTOCOL("_TtP10MyIdShared18MyIdClientDelegate_")
 @end
 
 enum MyIdLocale : NSInteger;
-enum MyIdResolution : NSInteger;
-enum MyIdPresentationStyle : NSInteger;
 
 SWIFT_CLASS("_TtC10MyIdShared10MyIdConfig")
 @interface MyIdConfig : NSObject
 @property (nonatomic) enum MyIdLocale locale;
-@property (nonatomic) enum MyIdCameraShape cameraShape;
-@property (nonatomic) enum MyIdResolution resolution;
-@property (nonatomic) enum MyIdCameraSelector cameraSelector;
-@property (nonatomic) enum MyIdPresentationStyle presentationStyle;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -368,29 +350,23 @@ SWIFT_CLASS("_TtC10MyIdShared13MyIdGenerator")
 @end
 
 typedef SWIFT_ENUM(NSInteger, MyIdLocale, open) {
-  MyIdLocaleRU = 0,
-  MyIdLocaleEN = 1,
-  MyIdLocaleUZ = 2,
+  MyIdLocaleUzbek = 0,
+  MyIdLocaleKarakalpak = 1,
+  MyIdLocaleTajik = 2,
+  MyIdLocaleEnglish = 3,
+  MyIdLocaleRussian = 4,
 };
 
-typedef SWIFT_ENUM(NSInteger, MyIdPresentationStyle, open) {
-  MyIdPresentationStyleFULL = 0,
-  MyIdPresentationStyleSHEET = 1,
-};
-
-typedef SWIFT_ENUM(NSInteger, MyIdResolution, open) {
-  MyIdResolutionRESOLUTION_480 = 0,
-  MyIdResolutionRESOLUTION_720 = 1,
-};
-
-@class UIImage;
+@class NSData;
 
 SWIFT_CLASS("_TtC10MyIdShared10MyIdResult")
 @interface MyIdResult : NSObject
-@property (nonatomic, strong) UIImage * _Nullable image;
-@property (nonatomic, copy) NSString * _Nullable width;
-@property (nonatomic, copy) NSString * _Nullable height;
-@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable pixels;
+@property (nonatomic, copy) NSData * _Nullable farImageData;
+@property (nonatomic, copy) NSData * _Nullable nearImageData;
+@property (nonatomic, copy) NSData * _Nullable facemeshJsonData;
+@property (nonatomic, copy) NSString * _Nullable depthWidth;
+@property (nonatomic, copy) NSString * _Nullable depthHeight;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable depthPixels;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -708,24 +684,12 @@ typedef unsigned int swift_uint4  __attribute__((__ext_vector_type__(4)));
 #endif
 
 #if defined(__OBJC__)
-typedef SWIFT_ENUM(NSInteger, MyIdCameraSelector, open) {
-  MyIdCameraSelectorFRONT = 0,
-  MyIdCameraSelectorBACK = 1,
-};
-
-typedef SWIFT_ENUM(NSInteger, MyIdCameraShape, open) {
-  MyIdCameraShapeELLIPSE = 0,
-  MyIdCameraShapeCIRCLE = 1,
-};
-
 @class MyIdConfig;
 @protocol MyIdClientDelegate;
-@class UIViewController;
 
 SWIFT_CLASS("_TtC10MyIdShared10MyIdClient")
 @interface MyIdClient : NSObject
 + (void)startWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate;
-+ (UIViewController * _Nonnull)runWithConfig:(MyIdConfig * _Nonnull)config withDelegate:(id <MyIdClientDelegate> _Nonnull)delegate SWIFT_WARN_UNUSED_RESULT;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -740,16 +704,10 @@ SWIFT_PROTOCOL("_TtP10MyIdShared18MyIdClientDelegate_")
 @end
 
 enum MyIdLocale : NSInteger;
-enum MyIdResolution : NSInteger;
-enum MyIdPresentationStyle : NSInteger;
 
 SWIFT_CLASS("_TtC10MyIdShared10MyIdConfig")
 @interface MyIdConfig : NSObject
 @property (nonatomic) enum MyIdLocale locale;
-@property (nonatomic) enum MyIdCameraShape cameraShape;
-@property (nonatomic) enum MyIdResolution resolution;
-@property (nonatomic) enum MyIdCameraSelector cameraSelector;
-@property (nonatomic) enum MyIdPresentationStyle presentationStyle;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
@@ -777,29 +735,23 @@ SWIFT_CLASS("_TtC10MyIdShared13MyIdGenerator")
 @end
 
 typedef SWIFT_ENUM(NSInteger, MyIdLocale, open) {
-  MyIdLocaleRU = 0,
-  MyIdLocaleEN = 1,
-  MyIdLocaleUZ = 2,
+  MyIdLocaleUzbek = 0,
+  MyIdLocaleKarakalpak = 1,
+  MyIdLocaleTajik = 2,
+  MyIdLocaleEnglish = 3,
+  MyIdLocaleRussian = 4,
 };
 
-typedef SWIFT_ENUM(NSInteger, MyIdPresentationStyle, open) {
-  MyIdPresentationStyleFULL = 0,
-  MyIdPresentationStyleSHEET = 1,
-};
-
-typedef SWIFT_ENUM(NSInteger, MyIdResolution, open) {
-  MyIdResolutionRESOLUTION_480 = 0,
-  MyIdResolutionRESOLUTION_720 = 1,
-};
-
-@class UIImage;
+@class NSData;
 
 SWIFT_CLASS("_TtC10MyIdShared10MyIdResult")
 @interface MyIdResult : NSObject
-@property (nonatomic, strong) UIImage * _Nullable image;
-@property (nonatomic, copy) NSString * _Nullable width;
-@property (nonatomic, copy) NSString * _Nullable height;
-@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable pixels;
+@property (nonatomic, copy) NSData * _Nullable farImageData;
+@property (nonatomic, copy) NSData * _Nullable nearImageData;
+@property (nonatomic, copy) NSData * _Nullable facemeshJsonData;
+@property (nonatomic, copy) NSString * _Nullable depthWidth;
+@property (nonatomic, copy) NSString * _Nullable depthHeight;
+@property (nonatomic, copy) NSArray<NSNumber *> * _Nullable depthPixels;
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
