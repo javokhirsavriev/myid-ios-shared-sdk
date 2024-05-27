@@ -6,7 +6,7 @@
 	<dict>
 		<key>Assets.car</key>
 		<data>
-		eTUtv8XEuNZRNVa/nQC/XSXiewQ=
+		r+w3J9JhZZIKeNpJYJdsOzVCmH4=
 		</data>
 		<key>Headers/MyIdShared-Swift.h</key>
 		<data>
@@ -22,7 +22,7 @@
 		</data>
 		<key>Modules/MyIdShared.swiftmodule/arm64-apple-ios-simulator.abi.json</key>
 		<data>
-		49yXEJt9T7kbB0Z6BNqbzBH67qg=
+		rTynLXYdZt/5KQStlet4kfAduvU=
 		</data>
 		<key>Modules/MyIdShared.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -38,11 +38,11 @@
 		</data>
 		<key>Modules/MyIdShared.swiftmodule/arm64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		2CoMzZKcnw8ZXA7eZV/Rg//WGGI=
+		mW1Oh8cjtDjUT9ePFMXuco9HrxE=
 		</data>
 		<key>Modules/MyIdShared.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<data>
-		49yXEJt9T7kbB0Z6BNqbzBH67qg=
+		rTynLXYdZt/5KQStlet4kfAduvU=
 		</data>
 		<key>Modules/MyIdShared.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
 		<data>
@@ -58,15 +58,11 @@
 		</data>
 		<key>Modules/MyIdShared.swiftmodule/x86_64-apple-ios-simulator.swiftmodule</key>
 		<data>
-		EPsLBiT2RXroCWoDtxwwaB45u6Y=
+		3eFsVjheZKfcB7e0K/a+67J6wQY=
 		</data>
 		<key>Modules/module.modulemap</key>
 		<data>
 		DrxeFb+xbi3fn9b0uUnpRGxHeE0=
-		</data>
-		<key>face_landmarker.task</key>
-		<data>
-		scrLYYJDcIanI0qfx33gSZ0YBNo=
 		</data>
 	</dict>
 	<key>files2</key>
@@ -75,7 +71,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			jGY7ReNkrz7+RTMS7GPjNk2+GybUzWyIXmTzeFfLyEI=
+			C7GMSa4GeCp6TI/KauFoTGGzjMJq+32iwQKRR8bMhwA=
 			</data>
 		</dict>
 		<key>Headers/MyIdShared-Swift.h</key>
@@ -96,7 +92,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			pulXF2448sX8stg3XsvMhMmrFvDBZoppD44xbjKVyL4=
+			mshZnH7bh6QJTnM+tIqEcOm0TNHmVrvktHrajMYFgog=
 			</data>
 		</dict>
 		<key>Modules/MyIdShared.swiftmodule/arm64-apple-ios-simulator.private.swiftinterface</key>
@@ -124,14 +120,14 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			iiya2kArOBTwr8YFc63ZJpy6doMj2Gai2z3at/SpIuk=
+			XU5NvMVeRNC8CZv7c9yLtvTVyiGeVl7HjUllTkWAyKU=
 			</data>
 		</dict>
 		<key>Modules/MyIdShared.swiftmodule/x86_64-apple-ios-simulator.abi.json</key>
 		<dict>
 			<key>hash2</key>
 			<data>
-			pulXF2448sX8stg3XsvMhMmrFvDBZoppD44xbjKVyL4=
+			mshZnH7bh6QJTnM+tIqEcOm0TNHmVrvktHrajMYFgog=
 			</data>
 		</dict>
 		<key>Modules/MyIdShared.swiftmodule/x86_64-apple-ios-simulator.private.swiftinterface</key>
@@ -159,7 +155,7 @@
 		<dict>
 			<key>hash2</key>
 			<data>
-			gsQXdE/9jLIV+KKkzYJKLH3C++veQ+d2wGr7qRXid14=
+			MQoW/5aojeMpXJRm87NnnUFNXQt9Nz1uEeN9W4ROHFs=
 			</data>
 		</dict>
 		<key>Modules/module.modulemap</key>
@@ -167,13 +163,6 @@
 			<key>hash2</key>
 			<data>
 			JpubDsufL87reEQjaXcEZMVs+yQDYc6p5GsHP9zTHwE=
-			</data>
-		</dict>
-		<key>face_landmarker.task</key>
-		<dict>
-			<key>hash2</key>
-			<data>
-			ZBhOIpsmMQe8K4BMZiXbE0H/K7cxh0sLzC/mVE4Lyf8=
 			</data>
 		</dict>
 	</dict>

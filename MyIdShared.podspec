@@ -1,6 +1,6 @@
 Pod::Spec.new do |spec|
   spec.name               = "MyIdShared"
-  spec.version            = "1.3"
+  spec.version            = "1.4"
   spec.platform = :ios, '13.0'
   spec.ios.deployment_target = '13.0'
   spec.summary            = "MyID Shared Framework"
